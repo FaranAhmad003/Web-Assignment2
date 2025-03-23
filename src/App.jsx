@@ -14,8 +14,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-[#F5F0EB] p-6">
-      {/*<DataEntry formData={formData} setFormData={setFormData} />*/ }
-      <AboutMeSection {...formData} />
+      <DataEntry formData={formData} setFormData={setFormData} />
     </div>
   );
 }
