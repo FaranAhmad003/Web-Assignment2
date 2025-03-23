@@ -13,7 +13,6 @@ function App() {
 
   return (
     <div className="min-h-screen bg-[#F5F0EB] p-6">
-      <h1 className="text-3xl font-bold text-[#5C4B3C] mb-8 text-center">Portfolio Generator</h1>
       <DataEntry formData={formData} setFormData={setFormData} />
     </div>
   );
