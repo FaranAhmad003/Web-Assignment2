@@ -9,7 +9,7 @@
   justify-content: space-between;
   align-items: center;
   backdrop-filter: blur(10px);
-  height: 60px;
+  height: 50px;
 }
 
 .top-bar .menu {
@@ -43,4 +43,31 @@
   margin-right: 10px;
   height: 32px;
   width: 32px;
+}
+
+.hamburger {
+  display: none;
+  cursor: pointer;
+  color: #e5d5c5;
+}
+
+@media screen and (max-width: 768px) {
+  .top-bar .menu {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    flex-direction: column;
+    background-color: rgba(92, 64, 51, 0.95);
+    width: 100%;
+    padding: 1rem;
+    display: none;
+  }
+
+  .top-bar .menu.open {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }

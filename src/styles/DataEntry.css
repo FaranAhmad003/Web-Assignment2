@@ -1,0 +1,161 @@
+/* src/styles/DataEntryForm.css */
+
+:root {
+  --brown-dark: #5C4B3C;
+  --brown-light: #8B7355;
+  --beige-light: #F5F0EB;
+  --beige-mid: #D4C5B9;
+  --accent-green: #15803d;
+  --accent-blue: #2563eb;
+  --text-dark: #1F1B16;
+}
+
+body {
+  background-color: var(--beige-light);
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+  color: var(--text-dark);
+  padding-top: 60px;
+}
+
+.data-entry-form {
+  max-width: 960px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.form-section {
+  background-color: white;
+  border-radius: 1rem;
+  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+}
+
+.form-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: var(--brown-dark);
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+.form-subtitle {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--brown-dark);
+  margin-bottom: 1rem;
+}
+
+.form-group {
+  margin-bottom: 2rem;
+}
+
+.form-field {
+  margin-bottom: 1rem;
+}
+
+.form-field label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--brown-dark);
+}
+
+input, textarea {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.5rem;
+  border: 1px solid var(--beige-mid);
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.3s ease;
+}
+
+input:focus, textarea:focus {
+  border-color: var(--brown-light);
+  box-shadow: 0 0 0 2px rgba(139, 115, 85, 0.2);
+}
+
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.tag {
+  background-color: var(--brown-light);
+  color: white;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+}
+
+.tag button {
+  margin-left: 0.5rem;
+  font-weight: bold;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: white;
+}
+
+.add-btn,
+.remove-btn,
+.submit-btn {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  border: none;
+}
+
+.add-btn {
+  background-color: var(--brown-light);
+  color: white;
+}
+
+.add-btn:hover {
+  background-color: var(--brown-dark);
+}
+
+.remove-btn {
+  background-color: transparent;
+  color: #dc2626;
+}
+
+.remove-btn:hover {
+  color: #b91c1c;
+}
+
+.submit-btn {
+  background-color: var(--accent-green);
+  color: white;
+  justify-content: center;
+  width: 100%;
+}
+
+.submit-btn:hover {
+  background-color: #166534;
+}
+
+.flex-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.card {
+  padding: 1rem;
+  border: 1px solid var(--beige-mid);  /*card format*/
+  border-radius: 0.75rem;
+  background-color: #fffaf5;
+  margin-bottom: 1rem;
+}
