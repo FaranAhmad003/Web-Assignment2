@@ -1,0 +1,46 @@
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 1rem;
+  background-color: rgba(92, 64, 51, 0.9);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(10px);
+  height: 60px;
+}
+
+.top-bar .menu {
+  display: flex;
+  gap: 2rem; 
+  margin-left: auto;
+}
+
+.top-bar a {
+  color: #e5d5c5;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 600;
+  transition: text-decoration 0.3s ease, color 0.3s ease;
+}
+
+.top-bar a:hover {
+  text-decoration: underline;
+  color: #fff;
+}
+
+.top-bar .logo {
+  display: flex;
+  align-items: center;
+  color: #e5d5c5;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.top-bar .logo svg {
+  margin-right: 10px;
+  height: 32px;
+  width: 32px;
+}
