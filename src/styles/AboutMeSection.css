@@ -1,0 +1,78 @@
+/* src/styles/AboutMeSection.css */
+
+.about-section {
+  background-color: #F5F0EB;
+  padding: 4rem 2rem;
+  border-radius: 1rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.about-title {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #5C4B3C;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.about-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.about-img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid #8B7355;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.about-details {
+  flex: 1;
+  max-width: 600px;
+}
+
+.about-description {
+  font-size: 1rem;
+  color: #3D2E24;
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.about-lists {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.about-lists h3 {
+  font-size: 1.25rem;
+  color: #5C4B3C;
+  margin-bottom: 0.5rem;
+}
+
+.about-lists ul {
+  list-style: disc inside;
+  padding-left: 1rem;
+  color: #3D2E24;
+  font-size: 1rem;
+}
+
+@media (max-width: 768px) {
+  .about-content {
+    flex-direction: column;
+    align-items: center;
+  }
+  .about-details {
+    text-align: center;
+  }
+  .about-lists {
+    justify-content: center;
+  }
+}

@@ -1,5 +1,5 @@
 .hero-section {
-  background: linear-gradient(to bottom right, #8B7355, #5C4B3C);
+  background: linear-gradient(to bottom right, #927d64, #403429);
   color: #fff;
   padding: 6rem 2rem;
   text-align: center;
@@ -27,9 +27,16 @@
   border-radius: 0.5rem;
   text-decoration: none;
   transition: all 0.3s ease;
+  gap: 1rem;
   
 }
 
 .cta-button:hover {
   background-color: #e4dbd0;
+}
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
 }
