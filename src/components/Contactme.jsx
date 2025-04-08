@@ -1,65 +1,59 @@
 // src/components/ContactSection.jsx
 import React, { useState, useEffect } from 'react';
 import '../styles/ContactMe.css';
+import TopBar from './TopBar';
 
-const Contactme = () => {
-  const [formData, setFormData] = useState({ name: '', email: '', message: '' });
+const ContactSection = () => {
   const [submitted, setSubmitted] = useState(false);
 
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-
-    // Simulate submission - replace this with actual API or Google Form link integration
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
-    setFormData({ name: '', email: '', message: '' });
-  };
+  const GOOGLE_FORM_ACTION =
+    'https://docs.google.com/forms/d/e/1FAIpQLSd7vHGo0M25OmrBmCzxFwcmWQ2NUUTEbNGEL9cq5I2-08GzTQ/formResponse';
 
   useEffect(() => {
     if (submitted) {
-      const timeout = setTimeout(() => setSubmitted(false), 3000);
-      return () => clearTimeout(timeout);
+      const timer = setTimeout(() => setSubmitted(false), 3000);
+      return () => clearTimeout(timer);
     }
   }, [submitted]);
 
   return (
-    <section className="contact-section" id="contact">
-      <h2 className="contact-title">Contact Me</h2>
-      <form className="contact-form" onSubmit={handleSubmit}>
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
-        <input
-          type="email"
-          name="email"
-          placeholder="Your Email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-        <textarea
-          name="message"
-          placeholder="Your Message"
-          value={formData.message}
-          onChange={handleChange}
-          rows={5}
-          required
-        />
-        <button type="submit">Send Message</button>
-        {submitted && <p className="success-message">Message sent successfully!</p>}
-      </form>
-    </section>
+    <>
+      <TopBar />
+      <section className="contact-section" id="contact">
+        <h2 className="contact-title">Contact Me</h2>
+
+        <form
+          className="contact-form"
+          action={GOOGLE_FORM_ACTION}
+          method="POST"
+          target="_blank"
+          onSubmit={() => setSubmitted(true)}
+        >
+          <input
+            type="text"
+            name="entry.323424333" 
+            placeholder="Your Name"
+            required
+          />
+          <input
+            type="email"
+            name="entry.1068956994" 
+            placeholder="Your Email"
+            required
+          />
+          <textarea
+            name="entry.1836383750"
+            placeholder="Your Message"
+            rows={5}
+            required
+          ></textarea>
+
+          <button type="submit">Send Message</button>
+          {submitted && <p className="success-message">Message sent successfully!</p>}
+        </form>
+      </section>
+    </>
   );
 };
 
-export default Contactme;
+export default ContactSection;

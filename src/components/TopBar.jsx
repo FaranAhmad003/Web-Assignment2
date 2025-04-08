@@ -5,7 +5,6 @@ import '../styles/TopBar.css';
 
 const TopBar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
   const toggleMenu = () => setIsOpen(!isOpen);
 
   return (
@@ -14,16 +13,17 @@ const TopBar = () => {
         <Webhook className="h-8 w-8 text-legal-beige" />
         <span className="ml-2 text-2xl font-serif text-legal-beige">Web</span>
       </div>
-    
+
       <div className="hamburger" onClick={toggleMenu}>
         {isOpen ? <X size={24} /> : <Menu size={24} />}
       </div>
 
       <div className={`menu ${isOpen ? 'open' : ''}`}>
-        <Link to="">Home</Link>
-        <Link to="">About Us</Link>
-        <Link to="">Project</Link>
-        <Link to="">Content</Link>
+        <Link to="/">Home</Link>
+        <Link to="/about">About Me</Link>
+        <Link to="/projects">Projects</Link>
+        <Link to="/contact">Contact</Link>
+        
       </div>
     </nav>
   );

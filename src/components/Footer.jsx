@@ -1,28 +1,31 @@
 import React from 'react';
+import { Github, Linkedin } from 'lucide-react';
 import '../styles/Footer.css';
-import { Github, Linkedin, Twitter } from 'lucide-react';
 
-const Footer = ({ links }) => {
+const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="footer-links">
-        {links.github && (
-          <a href={links.github} target="_blank" rel="noopener noreferrer">
+    <footer className="site-footer">
+      <div className="footer-content">
+        <span className="footer-title">Portfolio Builder</span>
+        <div className="footer-icons">
+          <a
+            href="https://github.com/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+          >
             <Github />
           </a>
-        )}
-        {links.linkedin && (
-          <a href={links.linkedin} target="_blank" rel="noopener noreferrer">
+          <a
+            href="https://linkedin.com/in/yourusername"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+          >
             <Linkedin />
           </a>
-        )}
-        {links.twitter && (
-          <a href={links.twitter} target="_blank" rel="noopener noreferrer">
-            <Twitter />
-          </a>
-        )}
+        </div>
       </div>
-      <p className="footer-text">&copy; {new Date().getFullYear()} Built with ❤️ by You</p>
     </footer>
   );
 };

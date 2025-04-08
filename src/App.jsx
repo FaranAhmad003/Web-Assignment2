@@ -1,20 +1,25 @@
 // src/App.jsx
-import React, { useState } from 'react';
+import React from 'react';
 import './App.css';
+import { Routes, Route } from 'react-router-dom';
+import Footer from './components/Footer.jsx';
+
 import DataEntry from './components/DataEntry.jsx';
-import AboutMeSection from './components/AboutMeSection.jsx';
+import AboutMeSection from './components/AboutMe.jsx';
+import ProjectsSection from './components/ProjectsSection.jsx';
+import ContactSection from './components/Contactme.jsx';
 
 function App() {
-  const [formData, setFormData] = useState({
-    name: '',
-    title: '',
-    bio: '',
-    profilePicture: ''
-  });
-
   return (
-    <div className="min-h-screen bg-[#F5F0EB] p-6">
-      <DataEntry formData={formData} setFormData={setFormData} />
+    <div className="app-wrapper">
+      <div className="main-content">
+        <Routes>
+          <Route path="/" element={<DataEntry />} />
+          <Route path="/about" element={<AboutMeSection />} />
+          <Route path="/projects" element={<ProjectsSection />} />
+          <Route path="/contact" element={<ContactSection />} />
+        </Routes>
+      </div>
     </div>
   );
 }

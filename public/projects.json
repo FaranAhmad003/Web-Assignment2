@@ -1,0 +1,23 @@
+[
+  {
+    "id": "1",
+    "title": "Portfolio Website",
+    "description": "A personal portfolio made with React and Tailwind.",
+    "image": "https://via.placeholder.com/300x200",
+    "githubLink": "https://github.com/yourname/portfolio"
+  },
+  {
+    "id": "2",
+    "title": "ToDo App",
+    "description": "A task manager app with drag and drop features.",
+    "image": "https://via.placeholder.com/300x200",
+    "githubLink": "https://github.com/yourname/todo-app"
+  },
+  {
+    "id": "3",
+    "title": "Weather App",
+    "description": "Get real-time weather updates using OpenWeatherMap API.",
+    "image": "https://via.placeholder.com/300x200",
+    "githubLink": "https://github.com/yourname/weather-app"
+  }
+]

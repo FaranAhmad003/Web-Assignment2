@@ -76,3 +76,32 @@
     justify-content: center;
   }
 }
+.about-subsection {
+  margin-bottom: 2rem;
+}
+
+.tag-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag-chip {
+  background-color: #E4DBD0;
+  color: #3D2E24;
+  padding: 0.4rem 0.8rem;
+  font-size: 0.9rem;
+  border-radius: 999px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.tag-chip.empty {
+  background-color: #f8f1e9;
+  color: #9c8b79;
+  font-style: italic;
+}
+.tag-chip:hover {
+  background-color: #d4c6b0;
+  transform: translateY(-2px);
+}
